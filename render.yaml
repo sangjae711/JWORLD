@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: insurance-with-care-preview
+    runtime: static
+    buildCommand: echo "Static insurance preview ready"
+    staticPublishPath: ./insurance-preview
+    autoDeployTrigger: commit
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
