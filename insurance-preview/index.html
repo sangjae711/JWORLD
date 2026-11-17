@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta name="site-revision" content="vertical-webtoon-v9">
+<meta name="site-revision" content="premium-financial-v10">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6f4ef">
@@ -145,11 +145,212 @@ html,body{overflow-x:clip}
   .comic-track .comic-card-body p {font-size:14px !important;line-height:1.7 !important;}
 }
 
+/* V10 — professional editorial financial advisory design; no invented claims */
+:root {
+  --paper:#f7f7f4; --paper-2:#edf0ee; --ink:#162d3a; --ink-2:#203a49;
+  --slate:#485c66; --muted:#687981; --line:#d9dfde; --sand:#b4a28e;
+  --terra:#96745c; --warm:#fcfcfa; --white:#fff;
+}
+html { scroll-padding-top:84px; }
+body { background:var(--warm); color:var(--ink); font-weight:430; }
+.container { width:min(1180px,calc(100% - 96px)); }
+.section-pad { padding:110px 0; }
+.preview-banner { background:#eeeee9; border-bottom:1px solid #dce0dc; color:#617075; font-size:10px; letter-spacing:0; }
+.preview-dot { background:#997c68; }
+.site-header,.site-header.scrolled {
+  background:rgba(255,255,255,.97); border-bottom:1px solid #e4e8e6;
+  box-shadow:0 2px 16px rgba(10,32,43,.025); backdrop-filter:blur(14px);
+}
+.site-header { height:80px; }
+.site-header.scrolled { height:72px; }
+.brand .goodrich-wordmark { font-size:32px; letter-spacing:-.065em; font-weight:800; color:#15303e; }
+.brand-caption { border-color:#d6dcd9; }
+.brand .brand-caption { font-size:11px; font-weight:660; line-height:1.5; color:#31464f; }
+.brand .brand-caption small { font-weight:410; color:#718087; font-size:10px; }
+.desktop-nav { gap:26px; font-size:13px; font-weight:600; color:#53636a; }
+.desktop-nav a { transition:color .2s; }
+.desktop-nav a:hover,.desktop-nav a:focus-visible { color:#876a55; }
+.header-cta,.button-dark,.form-submit {
+  background:#183441; color:#fff; border-radius:5px; box-shadow:none;
+  transition:background .2s ease,transform .2s ease;
+}
+.header-cta { padding:14px 20px; font-size:12px; gap:25px; }
+.header-cta:hover,.button-dark:hover,.form-submit:hover { background:#294d5c; }
+.button { border-radius:5px; padding:17px 22px; font-size:13px; font-weight:680; }
+.button:hover { transform:translateY(-1px); }
+.section-index,.overline,.coverage-tag,.form-label { color:#8b6e57; letter-spacing:.13em; }
+/* Human-centered first screen. The photograph stays secondary to a clear readable promise. */
+.hero-ref { min-height:650px; padding:74px 0 27px; background:#f9faf8; }
+.hero-ref::after { content:""; pointer-events:none; position:absolute; left:0; right:0; bottom:0; height:1px; background:#e6eae7; }
+.hero-ref-grid { grid-template-columns:160px minmax(0,1fr); gap:57px; }
+.hero-ref-side { max-width:160px; padding-top:20px; }
+.ref-line { background:#cfd8d5; }
+.ref-num { color:#a6b0ad; font-size:78px; }
+.ref-side-note { color:#718087; font-size:12px; }
+.hero-portrait { width:min(39%,540px); opacity:.8; filter:saturate(.82); }
+.hero-ref-content { max-width:780px; padding-right:45px; }
+.hero-ref h1 { font-size:clamp(39px,4.1vw,57px); line-height:1.28; letter-spacing:-.066em; font-weight:760; margin-bottom:36px; }
+.hero-ref h1 .accent-line { color:#946d54; }
+.hero-ref-content .ref-lead { font-size:17px; line-height:1.78; letter-spacing:-.022em; font-weight:680; }
+.hero-ref-content>p:not(.ref-lead) { font-size:14px; line-height:2.0; color:#4c5f67; max-width:580px; }
+.ref-quote { border-left:2px solid #a58b76; padding:10px 0 10px 23px; background:transparent; font-size:19px; color:#6d5b4f; font-weight:650; margin:27px 0 23px; }
+.hero-ref-actions { gap:29px; }
+.text-link { font-weight:620; }
+.hero-ref .hero-foot { margin-top:45px; font-size:10px; color:#8a9697; }
+/* Editorial rhythm: restrained dividers instead of decorations. */
+.story { background:#fff; }
+.story-intro h2,.principles h2,.coverage h2,.faq h2 { font-weight:730; letter-spacing:-.058em; }
+.story-intro h2 em,.principles h2 em,.comic-heading h3 em { color:#886f5c; }
+.story-text p { color:#4d6068; }
+.story-text .lead { color:#172f3b; font-weight:670; }
+.story-text .story-emphasis { border-left-color:#ad947e; color:#6f5848; }
+.story-more { border-color:#dce1dd; }
+.story-more summary { color:#334e5a; }
+.slide-stage { background:#fff; }
+.principles { background:#f0f2ef; }
+.principle { border-color:#d3dad7; }
+.principle h3 { font-weight:675; }
+.principle p { color:#596b73; }
+.principle-no { color:#a28c79; }
+.coverage { background:#192f3b; }
+.coverage-right { background:#fff; border:1px solid #d9e0de; border-radius:7px; padding:40px 43px; box-shadow:0 20px 52px rgba(0,0,0,.06); }
+.coverage-left h2 { font-weight:740; }
+.coverage-left>p:not(.section-index) { color:#cdd7d8; }
+.coverage-comic { border-top-color:#475e66; }
+.coverage-comic-heading h3 { font-weight:710; }
+.coverage-comic-footer { font-size:16px; }
+.philosophy { background:#f9faf8; }
+.philosophy-photo { border-radius:7px; box-shadow:0 18px 48px rgba(18,43,53,.06); }
+.philosophy-copy h2 { letter-spacing:-.055em; font-weight:720; }
+.philosophy-copy>p:not(.section-index) { color:#53666e; }
+.philosophy-dialogues { border-top-color:#d9dfdc; }
+.dialogue-card {
+  background:#fff; border:1px solid #e0e6e1; border-radius:7px;
+  min-height:205px; padding:24px 25px; box-shadow:0 8px 24px rgba(22,45,58,.025);
+}
+.dialogue-icon { font-size:29px; color:#b5a08b; }
+.dialogue-card>p { font-size:16px; font-weight:540; color:#314752; }
+.dialogue-card>span { color:#8b6c54; }
+.availability { background:#e7ece8; border-block:1px solid #d8dfdc; }
+.availability h2 { font-weight:710; }
+.faq { background:#fff; }
+.faq-list details,.faq-list { border-color:#dbe1de; }
+.faq-list summary { font-weight:630; color:#233945; }
+.contact { background:#17313f; }
+.contact-copy h2 { font-weight:750; }
+.form-panel { background:#fff; border:1px solid #dce2df; border-radius:9px; box-shadow:0 19px 55px rgba(8,23,31,.11); padding:40px 42px; }
+.form-icon { border-radius:5px; }
+.form-alert { color:#6c6254; background:#f1eee7; border-left:3px solid #a88c71; }
+.form-field label { font-weight:650; }
+.form-field input,.form-field select,.form-field textarea {
+  min-height:49px; border:1px solid #d6dfdc; border-radius:5px;
+  color:#203743; font-size:14px; background:#fdfefd;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus { border-color:#537785; box-shadow:0 0 0 3px rgba(45,90,110,.11); }
+.form-submit { border-radius:5px; min-height:58px; font-size:14px; }
+.consent-box { border-radius:3px; }
+.footer { background:#112936; }
+/* Webtoons: readable vertically, treated as editorial case studies. */
+.comic-section .comic-track,.coverage-comic .comic-track,.comic-track.comic-track--medical {
+  display:flex !important; flex-flow:column nowrap !important;
+  grid-template-columns:none !important; gap:18px !important;
+  max-width:680px !important; width:100% !important;
+  margin:0 auto !important; overflow:visible !important;
+  scroll-snap-type:none !important; padding:0 !important;
+}
+.comic-track > .comic-card,.comic-track--medical > .comic-card {
+  display:block !important; width:100% !important; min-width:0 !important;
+  max-width:100% !important; flex:none !important; scroll-snap-align:none !important;
+  background:#fff !important; border:1px solid #dce2df !important;
+  border-radius:8px !important; overflow:hidden !important;
+  box-shadow:0 9px 24px rgba(22,45,58,.045);
+}
+.comic-card:hover { transform:none; box-shadow:0 9px 24px rgba(22,45,58,.045); }
+.comic-track .comic-card-media,.comic-track--medical .comic-card-media { height:auto !important; aspect-ratio:auto !important; background:#ecece6; }
+.comic-track .comic-card-media img,.comic-track--medical .comic-card-media img { display:block !important; width:100% !important; height:auto !important; object-fit:contain !important; }
+.comic-number { background:#24424e; border-radius:4px; font-size:12px; padding:10px 12px; top:15px; left:15px; }
+.comic-card-body,.comic-track--medical .comic-card-body { background:#fff; padding:22px 26px 26px !important; min-height:0 !important; }
+.comic-card-body p,.comic-track--medical .comic-card-body p { font-size:15px !important; font-weight:510; color:#3b535f; }
+.comic-speaker { font-size:11px; color:#8d6b52; }
+.comic-controls { display:none !important; }
+.comic-heading,.coverage-comic-heading { margin-bottom:34px; }
+.comic-conclusion { margin-top:30px; color:#4b626b; font-size:17px; }
+.comic-note { font-size:11px; }
+/* Keep subtle reveals, respect reduced motion. */
+.reveal,.reveal-left,.reveal-right { transition-duration:.65s; }
+.reveal { transform:translateY(24px); }
+.reveal-left { transform:translateX(-20px); }
+.reveal-right { transform:translateX(20px); }
+:focus-visible { outline:2px solid #7997a3; outline-offset:3px; }
+@media(max-width:1150px) {
+  .container { width:calc(100% - 72px); }
+  .hero-ref-grid { grid-template-columns:130px minmax(0,1fr); gap:35px; }
+  .hero-ref-side { max-width:130px; }
+  .hero-ref-content { padding-right:34px; }
+  .hero-ref h1 { font-size:clamp(40px,4.5vw,52px); }
+  .hero-portrait { width:42%; }
+}
+@media(max-width:850px) {
+  .hero-ref-grid { grid-template-columns:90px minmax(0,1fr); gap:20px; }
+  .hero-ref-content { padding-right:0; }
+  .hero-portrait { opacity:.4; }
+}
+@media(max-width:720px) {
+  .comic-section .comic-track,.coverage-comic .comic-track,.comic-track.comic-track--medical { width:100% !important; max-width:100% !important; gap:15px !important; }
+  .comic-card-body,.comic-track--medical .comic-card-body { padding:18px 20px 22px !important; }
+  .comic-card-body p,.comic-track--medical .comic-card-body p { font-size:14px !important; }
+  .comic-heading,.coverage-comic-heading { margin-bottom:23px; }
+}
+@media(max-width:620px) {
+  html { scroll-padding-top:66px; }
+  .container { width:calc(100% - 38px); }
+  .section-pad { padding:78px 0; }
+  .site-header { height:65px; }
+  .site-header.scrolled { height:60px; }
+  .brand .goodrich-wordmark { font-size:24px; }
+  .brand .brand-caption { font-size:9px; }
+  .header-cta { padding:11px 13px; font-size:11px; }
+  .hero-ref { min-height:0; padding:50px 0 25px; }
+  .hero-ref-grid { display:block; }
+  .hero-ref-side { max-width:none; padding:0; }
+  .hero-ref-content { padding-right:0; }
+  .hero-portrait { width:79%; height:420px; top:20px; opacity:.17; filter:saturate(.67); }
+  .hero-ref h1 { font-size:clamp(31px,8.1vw,44px); margin:23px 0 27px; line-height:1.27; }
+  .hero-ref-content .ref-lead { font-size:14px; }
+  .hero-ref-content>p:not(.ref-lead) { font-size:13px; line-height:1.85; }
+  .ref-quote { font-size:17px; padding:11px 0 11px 15px; }
+  .hero-ref .hero-foot { margin-top:36px; }
+  .story-intro h2,.principles h2,.coverage h2,.faq h2 { font-size:clamp(34px,9vw,43px); }
+  .story-text p { font-size:14px; }
+  .comic-track > .comic-card,.comic-track--medical > .comic-card { border-radius:7px !important; }
+  .dialogue-card { min-height:0; padding:20px 22px; }
+  .dialogue-card>p { font-size:14px; }
+  .coverage-right { padding:27px 22px; }
+  .philosophy-photo { border-radius:6px; }
+  .form-panel { border-radius:8px; padding:27px 21px; }
+  .form-field input,.form-field select,.form-field textarea { font-size:16px; }
+  .mobile-cta { background:#193844; color:#fff; border-top:1px solid #335867; padding:13px 20px calc(13px + env(safe-area-inset-bottom)); font-size:13px; }
+}
+@media(prefers-reduced-motion:reduce){ .reveal,.reveal-left,.reveal-right{transition:none !important; transform:none !important;} }
+/* final visual QA: preserve comfortable title/image separation and single-line nav button */
+@media(min-width:1151px) {
+  .hero-ref h1 {font-size:clamp(39px,3.75vw,53px)}
+  .hero-portrait {width:min(35%,500px)}
+}
+@media(max-width:620px) {
+  .header-inner {gap:8px}
+  .header-cta {white-space:nowrap;gap:8px;min-width:87px;justify-content:center}
+  .brand {gap:10px;min-width:0}
+  .brand .brand-caption {white-space:nowrap}
+  .brand .brand-caption small {display:none}
+}
+
+
 </style>
 
 </head>
 <body>
-<div class="preview-banner"><span class="preview-dot"></span> 디자인 검토용 시안 · 실제 상담 접수 및 카카오 알림 미연동 · 보험광고 검토 전 비공개</div>
+<div class="preview-banner"><span class="preview-dot"></span> 디자인 검토용 시안 · 상담 접수 및 카카오 알림 미연동 · 보험광고 검토 전 확인 필요</div>
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <a href="#top" class="brand" aria-label="보험 상담 처음으로"><span class="brand-sign goodrich-wordmark">굿리치</span><span class="brand-caption">부담 없이 물어보세요.<br><small>내 보험을 함께 차분히 살펴보겠습니다.</small></span></a>
