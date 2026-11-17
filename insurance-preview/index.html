@@ -68,6 +68,34 @@ html,body{overflow-x:clip}
 @media(max-width:720px){.comic-controls>div{display:none}.comic-section{margin-top:50px}.comic-heading,.coverage-comic-heading{display:block}.comic-heading h3,.coverage-comic-heading h3{font-size:clamp(29px,8vw,39px)}.comic-heading>p,.coverage-comic-heading>p{font-size:12px;margin:16px 0 0}.comic-controls small{display:inline;font-size:10px;margin-left:4px}.comic-track{display:grid;grid-template-columns:1fr;gap:14px;padding:1px 0 6px;overflow:visible;scroll-snap-type:none}.comic-card{flex:none;scroll-snap-align:none}.comic-card-media{height:215px}.comic-card-body{min-height:110px}.comic-card-body p{font-size:14px}.comic-conclusion{font-size:16px}.comic-note{font-size:10px}.story-more{margin:17px 0 7px}.story-text .story-more-inner p{font-size:13px;line-height:1.9}.story .slide-stage{padding-top:42px}.coverage-comic{margin-top:50px;padding-top:35px}.comic-track--medical{grid-template-columns:1fr}.comic-track--medical .comic-card{flex-basis:auto}.comic-track--medical .comic-card-media{height:240px}.comic-track--medical .comic-card-body p{font-size:14px}.coverage-comic-footer{font-size:14px}.philosophy-dialogues{margin-top:45px;padding-top:28px}.dialogue-intro{display:block;margin-bottom:20px}.dialogue-intro h3{margin-top:13px;font-size:29px}.dialogue-cards{grid-template-columns:1fr;gap:10px}.dialogue-card{min-height:0;padding:18px 22px}.dialogue-icon{display:inline-block;font-size:29px;margin:0 12px 0 0;vertical-align:middle}.dialogue-card>span{vertical-align:middle}.dialogue-card>p{margin:8px 0 0 0;font-size:14px;line-height:1.7}.coverage-left>p:not(.section-index){font-size:13px}.coverage-right>p.coverage-card-second{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.comic-card{transition:none}.comic-card:hover{transform:none}}
 
+
+/* V8: 웹툰은 스마트폰/태블릿에서 가로 스크롤 없이 세로로 연속 표시합니다. */
+@media screen and (max-width:1100px){
+  .comic-section .comic-track,
+  .coverage-comic .comic-track,
+  .comic-track.comic-track--medical {
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    grid-auto-flow:row !important;
+    gap:16px !important;
+    overflow-x:visible !important;
+    overflow-y:visible !important;
+    scroll-snap-type:none !important;
+    max-width:100% !important;
+    padding:0 0 10px !important;
+  }
+  .comic-track .comic-card,
+  .comic-track--medical .comic-card {
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    flex:none !important;
+    scroll-snap-align:none !important;
+  }
+  .comic-controls .comic-arrow,
+  .comic-controls>div {display:none !important;}
+}
 </style>
 
 </head>
@@ -198,7 +226,7 @@ html,body{overflow-x:clip}
     </div>
   </section>
 </main>
-<footer class="footer"><div class="container footer-top"><div><div class="footer-brand">굿리치 <span>보험을 지키는 상담</span></div><p>내 가족의 보험을 살피는 마음으로.</p></div><a class="backtop" href="#top">맨 위로 <span aria-hidden="true">↑</span></a></div><div class="container footer-details"><p>운영자 및 소속 보험대리점·보험설계사 등록정보: 정식 운영 전 확인 후 공개 · 연락처: 정식 운영 전 공개</p><p>본 사이트는 디자인 검토용 시안입니다. 보험료 절감 또는 보장 동일성을 보장하지 않으며, 기존 보험 계약의 변경·해약 시 불이익이 발생할 수 있습니다.</p><div class="footer-last"><span>© 2026 INSURANCE REVIEW. DESIGN PREVIEW.</span><a href="#privacy-note">개인정보 처리 안내</a></div></div></footer>
+<footer class="footer"><div class="container footer-top"><div><div class="footer-brand">굿리치 <span>보험을 지키는 상담</span></div><p>내 가족의 보험을 살피는 마음으로.</p></div><a class="backtop" href="#top">맨 위로 <span aria-hidden="true">↑</span></a></div><div class="container footer-details"><p>운영자 및 소속 보험대리점·보험설계사 등록정보: 정식 운영 전 확인 후 공개 · 연락처: 정식 운영 전 공개</p><p>본 사이트는 디자인 검토용 시안입니다. 보험료 절감 또는 보장 동일성을 보장하지 않으며, 기존 보험 계약의 변경·해약 시 불이익이 발생할 수 있습니다.</p><div class="footer-last"><span>© 2026 INSURANCE REVIEW. DESIGN PREVIEW · V8 세로형 웹툰</span><a href="#privacy-note">개인정보 처리 안내</a></div></div></footer>
 <a href="#consultation" class="mobile-cta">내 보험 점검 문의 <span aria-hidden="true">↗</span></a>
 <section id="privacy-note" style="background:#e9e6de;color:#56646b;padding:34px max(21px,calc((100% - 1232px)/2));font-size:12px;line-height:1.85"><h2 style="font-size:17px;margin:0 0 10px;color:#1a2c36">개인정보 처리 안내 · 디자인 시안</h2><p style="margin:0">현재는 상담 신청이 실제 접수되지 않습니다. 정식 운영 시 개인정보처리자, 위탁업체, 접수·보유 기간 및 삭제 요청 절차를 확정해야 합니다. 실제 배포용 개인정보 안내 초안은 배포 ZIP에 포함되어 있습니다.</p></section>
 <script>
